@@ -45,7 +45,7 @@ if(empty($status)) {
 	die("Возникла проблема при оплате");
 }
 
-//Проверка наличия товара - из модуля для Робокассы
+//Проверка наличия товара
 //Если не требуется обновлять количество товара, можно убрать 
 $purchases = $payler->orders->get_purchases(array('order_id'=>intval($order->id)));
 foreach($purchases as $purchase) {
@@ -58,7 +58,7 @@ foreach($purchases as $purchase) {
 //Установка статуса, что заказ оплачен
 $payler->orders->update_order(intval($order->id), array('paid'=>1));
 
-//Списание товара со склада - из модуля для Робокассы
+//Списание товара со склада
 //Если не требуется обновлять количество товара, можно убрать 
 $payler->orders->close(intval($order->id));
 $payler->notify->email_order_user(intval($order->id));
