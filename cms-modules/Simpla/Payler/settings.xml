@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module>
+	<name>Payler</name>
+	<settings>
+		<variable>key</variable>
+		<name>Платежный ключ</name>
+	</settings>
+	<settings>
+		<variable>type</variable>
+		<name>Тип платежа</name>
+		<options>
+			<name>Одностадийный</name>
+			<value>1</value>
+		</options>
+		<options>
+			<name>Двухстадийный</name>
+			<value>2</value>
+		</options>		
+	</settings>
+    <settings>
+        <variable>test</variable>
+        <name>Тестовый режим</name>
+        <options>
+            <name>Включен</name>
+            <value>1</value>
+        </options>
+        <options>
+            <name>Выключен</name>
+            <value>0</value>
+        </options>
+    </settings>
+</module>
