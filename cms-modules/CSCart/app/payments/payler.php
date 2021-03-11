@@ -96,7 +96,7 @@ if (defined('PAYMENT_NOTIFICATION')) {
 
     $data = array (
         'key' => $processor_data['processor_params']['key'],
-        'type' => 'Pay',
+        'type' => 'OneStep',
         'order_id' => $_order_id.'|'.time(),
         'amount' => 100 * $order_info['total'],
         'product' => substr($product,0,255),
